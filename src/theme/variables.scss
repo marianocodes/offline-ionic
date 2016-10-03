@@ -3,6 +3,7 @@
 @import "ionic.globals";
 
 
+
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -49,3 +50,34 @@ $colors: (
 
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
+
+// color palette
+$color-orange: #f1af67;
+$color-dark-orange: #e0831d;
+$color-white: #fff;
+$color-grey: #666;
+$color-ligth-grey: #fbf9f9;
+
+$font-icons: "Ionicons";
+
+// Ovewrite ionic variables
+$toolbar-background: #373a3c;
+$toolbar-active-color: $color-orange;
+$toolbar-inactive-color: $color-white;
+$toolbar-ios-title-text-color: $color-orange;
+$toolbar-md-title-text-color: $color-orange;
+
+$list-background-color: transparent;
+
+//general styles - global file not working
+ion-content {
+  background-color: $color-ligth-grey !important;
+
+  h2, a {
+    color: $color-orange;
+  }
+
+  p {
+    color: $color-grey;
+  }
+}
