@@ -1,17 +1,50 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Welcome Ninja</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="home">
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-left>
+         <lazy-img src="https://crossorigin.me/https://scontent-mia1-1.xx.fbcdn.net/v/l/t1.0-9/14212147_1643498722627488_5155525986953317338_n.png?oh=5183e0cdea8c6bbef80e1a1a86b2d366&oe=586155AB"></lazy-img>
+      </ion-avatar>
+      <a href="http://www.ninjadevs.io" target="blank">NinjaDevs.io</a>
+      <p>in code we trust</p>
+    </ion-item>
+
+    <lazy-img src="https://crossorigin.me/https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14433040_1653393861637974_213458122744312667_n.png?oh=86306aeaa19e37e0058aa9d78a460a77&oe=586786BD"></lazy-img>
+
+    <ion-card-content>
+      <p>The image above has been cached. Try turning on the airplane mode and let Imgcache.js do the magic!</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col text-center>
+        <a href="https://www.facebook.com/ninjadevsio/" target="blank" ion-button clear small no-padding>
+          <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
+        </a>
+      </ion-col>
+      <ion-col text-center>
+        <a href="https://twitter.com/ninjadevsio/" target="blank" ion-button clear small no-padding>
+          <ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon>
+        </a>
+      </ion-col>
+      <ion-col text-center>
+        <a href="https://www.instagram.com/ninjadevs.io/" target="blank" ion-button clear small no-padding>
+          <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon>
+        </a>
+      </ion-col>
+      <ion-col text-center>
+        <a href="https://github.com/NinjaDevsIO" target="blank" ion-button clear small no-padding>
+          <ion-icon ios="logo-github" md="logo-github"></ion-icon>
+        </a>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
 </ion-content>
