@@ -27,20 +27,28 @@ export class LazyImgComponent {
   ngOnInit() {
     this.img = this.el.nativeElement.querySelector('img');
     this.img.crossOrigin = 'Anonymous';
-  }
 
-  load(): void {
     // check if the images is already cached
     ImgCache.isCached(this.src, (path: string, success: boolean) => {
 
       // if not, it will be cached
-      if (!success) {
-        ImgCache.cacheFile(this.img.src, () => { console.info('cached file'); });
+      if (success) {
+
+        ImgCache.useCachedFile(this.img, () => {  });
+
+      } else {
+
+        ImgCache.cacheFile(this.src, () => { });
+
       }
 
-
     });
+  }
 
+  /**
+   * Show image has loaded
+   */
+  load(): void {
     this.hidden = false;
   }
 
@@ -48,21 +56,7 @@ export class LazyImgComponent {
    * This function will be triggered when http request fails
    */
   error(): void {
-    // check if the images is already cached
-    ImgCache.isCached(this.src, (path: string, success: boolean) => {
-
-      if(success) {
-        // use cached img
-        ImgCache.useCachedFile(this.img);
-      } else {
-        // remove img element
-        this.img.remove();
-      }
-
-
-    });
-
-    this.hidden = false;
+    this.img.remove();
   }
 
 }
