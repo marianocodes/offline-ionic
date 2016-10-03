@@ -1,3 +1,24 @@
 page-home {
 
+  [ion-button] {
+    color: $color-dark-orange;
+    font-size: 2rem;
+  }
+
+  ion-avatar {
+    border-radius: 3.6rem;
+    overflow: hidden;
+
+    lazy-img {
+      font-size: 1.2rem;
+      min-height: 3.6rem;
+    }
+
+  }
+
+  lazy-img {
+    font-size: 4rem;
+    min-height: 14rem;
+  }
+
 }
