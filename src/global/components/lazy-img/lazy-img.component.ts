@@ -44,7 +44,7 @@ export class LazyImgComponent {
    */
   error(): void {
     // check if the images is already cached
-    ImgCache.isCached(this.img.src, (path: string, success: boolean) => {
+    ImgCache.isCached(this.src, (path: string, success: boolean) => {
 
       if(success) {
         // use cached img
