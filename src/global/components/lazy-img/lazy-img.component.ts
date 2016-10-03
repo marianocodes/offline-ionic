@@ -46,7 +46,7 @@ export class LazyImgComponent {
   }
 
   /**
-   * Show image has loaded
+   * This function will show the image when it has loaded
    */
   load(): void {
     this.hidden = false;
