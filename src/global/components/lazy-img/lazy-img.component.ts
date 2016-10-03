@@ -6,10 +6,10 @@ import ImgCache from 'imgcache.js';
  * This component will be incharge of cache images and use them when the app is offline
  */
 @Component({
-  selector:  'lazy-img',
+  selector: 'lazy-img',
   template: `
     <div [ngClass]="{ 'placeholder': hidden }">
-      <img [ngClass]="{ 'active' : !hidden }" [src]="src" (load)="load()" (error)="error()" />
+      <img [ngClass]="{ 'active': !hidden }" [src]="src" (load)="load()" (error)="error()" />
     </div>
   `
 })
@@ -18,8 +18,11 @@ export class LazyImgComponent {
   @Input() src: string;
 
   public img: HTMLImageElement;
+  public hidden: boolean;
 
-  constructor(public el: ElementRef) { };
+  constructor(public el: ElementRef) {
+    this.hidden = true;
+  };
 
   ngOnInit() {
     this.img = this.el.nativeElement.querySelector('img');
@@ -35,8 +38,10 @@ export class LazyImgComponent {
         ImgCache.cacheFile(this.img.src, () => { console.info('cached file'); });
       }
 
+
     });
 
+    this.hidden = false;
   }
 
   /**
@@ -54,8 +59,10 @@ export class LazyImgComponent {
         this.img.remove();
       }
 
+
     });
 
+    this.hidden = false;
   }
 
 }

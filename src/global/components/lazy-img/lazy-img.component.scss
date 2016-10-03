@@ -1,0 +1,35 @@
+lazy-img {
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    min-width: inherit;
+    min-height: inherit;
+    width: 100%;
+
+    &.placeholder {
+      background-color: grey;
+      color: $color-grey;
+      font-family: $font-icons;
+      font-size: inherit;
+      &:before {
+        content: "\f30e";
+        position: absolute;
+      }
+    }
+
+  }
+
+  img {
+    display: block;
+    height: inherit;
+    opacity: 0;
+    transition: opacity 2s;
+    width: 100%;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+}
