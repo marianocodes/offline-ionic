@@ -1,9 +1,9 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
 import ImgCache from 'imgcache.js';
 
 /**
- * This component will be incharge of cache images and use them when the app is offline
+ * This component will be in charge of caching images and use them when the app is offline
  */
 @Component({
   selector: 'lazy-img',
@@ -13,7 +13,7 @@ import ImgCache from 'imgcache.js';
     </div>
   `
 })
-export class LazyImgComponent {
+export class LazyImgComponent implements OnInit {
 
   @Input() src: string;
 
@@ -28,7 +28,7 @@ export class LazyImgComponent {
     this.img = this.el.nativeElement.querySelector('img');
     this.img.crossOrigin = 'Anonymous';
 
-    // check if the images is already cached
+    // check if the images are already cached
     ImgCache.isCached(this.src, (path: string, success: boolean) => {
 
       // if not, it will be cached
