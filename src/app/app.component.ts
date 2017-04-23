@@ -1,31 +1,22 @@
-import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav }  from 'ionic-angular';
-import { StatusBar }      from 'ionic-native';
+import { Component } from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage }       from '../pages/';
-
-import ImgCache           from 'imgcache.js';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
-  template: `<ion-nav #nav></ion-nav>`
+  templateUrl: 'app.html'
 })
-export class OfflineApp {
+export class MyApp {
+  rootPage:any = TabsPage;
 
-  @ViewChild('nav') nav: Nav;
-
-  constructor(platform: Platform) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-
-      // activated debug mode
-      ImgCache.options.debug = true;
-      // page is set until img cache has started
-      ImgCache.init(()=>{ this.nav.setRoot(TabsPage); },
-                    ()=>{ console.error('ImgCache init: error! Check the log for errors');});
-
+      statusBar.styleDefault();
+      splashScreen.hide();
     });
-
   }
 }

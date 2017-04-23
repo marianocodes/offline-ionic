@@ -1,7 +1,8 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
-@import "ionic.globals";
+$font-path: "../assets/fonts";
 
+@import "ionic.globals";
 
 
 // Shared Variables
@@ -11,8 +12,7 @@
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$text-color:        #000;
-$background-color:  #fff;
+
 
 
 // Named Color Variables
@@ -24,13 +24,33 @@ $background-color:  #fff;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
+  primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222,
-  favorite:   #69BB7B
+  dark:       #222
 );
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
 
 
 // App Theme
@@ -48,8 +68,15 @@ $colors: (
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
-$ionicons-font-path: "../assets/fonts";
-@import "ionicons";
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
 
 // color palette
 $color-orange: #f1af67;
@@ -58,7 +85,7 @@ $color-white: #fff;
 $color-grey: #666;
 $color-ligth-grey: #fbf9f9;
 
-$font-icons: "Ionicons";
+$font-icons: 'Ionicons';
 
 // Ovewrite ionic variables
 $toolbar-background: #373a3c;
@@ -67,13 +94,18 @@ $toolbar-inactive-color: $color-white;
 $toolbar-ios-title-text-color: $color-orange;
 $toolbar-md-title-text-color: $color-orange;
 
+$tabs-background: #373a3c;
+$tabs-tab-color-active: $color-orange;
+$tabs-tab-color-inactive: $color-white;
+
 $list-background-color: transparent;
 
 //general styles - global file not working
 ion-content {
   background-color: $color-ligth-grey !important;
 
-  h2, a {
+  h2,
+  a {
     color: $color-orange;
   }
 
@@ -81,3 +113,4 @@ ion-content {
     color: $color-grey;
   }
 }
+
