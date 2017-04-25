@@ -1,37 +1,37 @@
 lazy-img {
   div {
-    align-items: center;
-    display: flex;
+    background-color: transparent;
+    color: $color-grey;
+    font-family: $font-icons;
+    font-size: inherit;
     height: inherit;
-    justify-content: center;
     min-height: inherit;
     min-width: inherit;
+    position: relative;
+    transition: 2s background-color ease;
     width: 100%;
+  }
 
-    &.placeholder {
-      background-color: grey;
-      color: $color-grey;
-      font-family: $font-icons;
-      font-size: inherit;
+  .placeholder {
+    background-color: grey;
 
-      &::before {
-        content: '\f30e';
-        position: absolute;
-      }
+    &::before {
+      align-items: center;
+      content: '\f30e';
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      right: 0;
     }
-
   }
 
   img {
     display: block;
     height: inherit;
-    opacity: 0;
-    transition: opacity 2s;
+    position: relative;
     width: 100%;
-
-    &.active {
-      opacity: 1;
-    }
+    z-index: 1;
   }
-
 }
