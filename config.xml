@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.offlineionic388220" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ionicframework.offlineionic388220" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>offline-ionic</name>
   <description>An Ionic app with offline support</description>
   <author email="malvarezhcr@gmail.com" href="mailto:malvarezhcr@gmail.com">Mariano Alvarez</author>
