@@ -1,7 +1,11 @@
 ## Offline App
 [![NinjaDevs.IO](https://drive.google.com/uc?export=download&id=0B1pDFiUHXp9WMWZ4cW8yQ1p2bjg)](http://ninjadevs.io/)
 
+<<<<<<< HEAD
 This is an example of how to cache image in Ionic 2.RC0 using ImgCache.js
+=======
+This is an example of how to cache images in Ionic 3! using ImgCache.js
+>>>>>>> develop
 
 ## Getting Started
 * Install Ionic CLI `npm install ionic -g --save`
@@ -30,5 +34,5 @@ This is an example of how to cache image in Ionic 2.RC0 using ImgCache.js
   * Intel x86 Emulator Accelerator (in case you need to use Android Emulator)
 
 ## Build and Run
-* ionic build ios/android
+* ionic build ios/android --prod
 * ionic run ios/android --emulator --devices

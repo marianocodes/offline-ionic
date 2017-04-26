@@ -1,37 +1,44 @@
-import { NgModule }              from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { OfflineApp } from './app.component';
 
-import { OfflineApp }       from './app.component';
+import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
 
-import { LazyImgComponent } from '../global/components/';
+import { LazyImgComponent }   from '../global/components/';
 
-import { AboutPage,
-         ContactPage,
-         HomePage,
-         TabsPage } from '../pages/';
+import { LazyLoadDirective }   from '../global/directives/';
 
-const pages = [ AboutPage,
-               ContactPage,
-               HomePage,
-               TabsPage ];
+import { ImgcacheService }    from '../global/services/';
 
-const components = [ LazyImgComponent ];
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     OfflineApp,
-    pages,
-    components
+    HomePage,
+    TabsPage,
+    LazyImgComponent,
+    LazyLoadDirective
   ],
   imports: [
+    BrowserModule,
     IonicModule.forRoot(OfflineApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     OfflineApp,
-    pages,
-    components
+    HomePage,
+    TabsPage,
+    LazyImgComponent
   ],
-  providers: []
+  providers: [
+    StatusBar,
+    SplashScreen,
+    ImgcacheService,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
+  ]
 })
-export class AppModule { }
+export class AppModule {}
