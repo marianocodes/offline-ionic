@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+import { HomePage } from './home';
 
-import { ContactPage } from './contact';
 import { CacheImgModule } from '../../global';
 
 @NgModule({
-  declarations: [ ContactPage ],
+  declarations: [
+    HomePage,
+  ],
   imports: [
     CacheImgModule,
 
-    IonicPageModule.forChild(ContactPage),
+    IonicPageModule.forChild(HomePage),
   ],
-  exports: [ ContactPage ]
+  exports: [
+    HomePage
+  ]
 })
-export class ContactPageModule {}
+export class HomePageModule {}

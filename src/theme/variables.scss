@@ -1,8 +1,18 @@
 // Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/v2/theming/
-$font-path: "../assets/fonts";
+// http://ionicframework.com/docs/theming/
 
-@import "ionic.globals";
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: '../assets/fonts';
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import 'ionic.globals';
 
 
 // Shared Variables
@@ -10,7 +20,7 @@ $font-path: "../assets/fonts";
 // To customize the look and feel of this app, you can override
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
 
@@ -21,7 +31,7 @@ $font-path: "../assets/fonts";
 // It's highly recommended to change the default colors
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
+// The 'primary' color is the only required color in the map.
 
 $colors: (
   primary:    #488aff,
@@ -60,25 +70,23 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
+@import 'ionic.theme.default';
 
 
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
-// http://ionicframework.com/docs/v2/ionicons/
+// http://ionicframework.com/docs/ionicons/
 
-@import "ionic.ionicons";
+@import 'ionic.ionicons';
 
 
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+@import 'roboto';
+@import 'noto-sans';
 
-
-// color palette
 $color-orange: #f1af67;
 $color-dark-orange: #e0831d;
 $color-white: #fff;
@@ -119,4 +127,3 @@ ion-content {
     color: $color-grey;
   }
 }
-

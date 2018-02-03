@@ -1,6 +1,8 @@
 {
   "name": "offline-ionic",
-  "app_id": "",
-  "v2": true,
-  "typescript": true
+  "app_id": "9a6279e2",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
