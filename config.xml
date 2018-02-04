@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.mahcr.offline" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>offline-ionic</name>
     <description>Caching images in Ionic 3</description>
     <author email="malvarezhcr@gmail.com" href="https://github.com/mahcr/offline-ionic">Mariano Alvarez</author>
@@ -93,13 +93,13 @@
     </feature>
     <allow-navigation href="http://192.168.0.101:8100" />
     <engine name="browser" spec="5.0.1" />
-    <engine name="ios" spec="4.5.4" />
     <engine name="android" spec="6.3.0" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
-    <plugin name="cordova-plugin-file" spec="^5.0.0" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.0" />
+    <plugin name="cordova-plugin-file" spec="~5.0.0" />
+    <engine name="ios" spec="~4.3.1" />
 </widget>

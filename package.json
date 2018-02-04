@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "5.0.3",
     "@chrisben/imgcache.js": "git+https://github.com/chrisben/imgcache.js.git#2.0.0",
     "@ionic-native/core": "4.4.0",
+    "@ionic-native/file": "^4.5.3",
     "@ionic-native/splash-screen": "4.4.0",
     "@ionic-native/status-bar": "4.4.0",
     "@ionic/pro": "1.0.16",
