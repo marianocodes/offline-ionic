@@ -17,8 +17,6 @@ import { normalizeUrlIos } from '../utils';
 @Injectable()
 export class ImgCacheService {
 
-  public imgQueue: string[] = [];
-
   private initNotifier$: ReplaySubject<string> = new ReplaySubject();
 
   constructor(private platform: Platform, private file: File) {
@@ -54,15 +52,15 @@ export class ImgCacheService {
       switchMapTo(
         this.isCached(src)
           .pipe(
-          flatMap(([ path, success ]: [ string, boolean ]) => {
-            return success ? this.getCachedFileURL(path) : this.cacheFile(path);
-          }),
-          map((url: string) => {
-            if (this.platform.is('ios')) {
-              return this.normalizeURlWKWview(url);
-            }
-            return url;
-          })
+            flatMap(([path, success]: [string, boolean]) => {
+              return success ? this.getCachedFileURL(path) : this.cacheFile(path);
+            }),
+            map((url: string) => {
+              if (this.platform.is('ios')) {
+                return this.normalizeURlWKWview(url);
+              }
+              return url;
+            })
           )
       )
     );
@@ -86,7 +84,7 @@ export class ImgCacheService {
   private getCachedFileURL(src: string): Observable<string> {
     return bindCallback<string, string[]>(ImgCache.getCachedFileURL)(src)
       .pipe(
-      map((urls: string[]) => urls[1])
+        map((urls: string[]) => urls[1])
       );
   }
 
