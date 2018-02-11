@@ -9,7 +9,8 @@ import { Component, Input } from '@angular/core';
   <div text-center [ngClass]="{ 'placeholder': placeholderActive }">
     <img op-lazy-img [source]="source" (loaded)="placeholderActive = false"/>
   </div>
-  `
+  `,
+  styleUrls: [ './lazy-img.component.scss' ]
 })
 export class LazyImgComponent {
 
