@@ -9,7 +9,7 @@ import {
 
 
 import {Subscription} from 'rxjs/Subscription';
-import {ImgCacheService} from "../../global/img-cache/img-cache.service";
+import {ImgCacheProvider} from "../../providers/img-cache/img-cache";
 
 /**
  * This directive is charge of cache the images and emit a loaded event
@@ -31,7 +31,7 @@ export class LazyLoadDirective implements OnInit, OnDestroy {
   private cacheSubscription: Subscription;
 
   constructor(public el: ElementRef,
-              public imgCacheService: ImgCacheService,
+              public imgCacheService: ImgCacheProvider,
               public renderer: Renderer2) {
   }
 

@@ -7,9 +7,9 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
 import {OfflineApp} from './app.component';
-import {CacheImgModule} from '../global';
 import {ComponentsModule} from "../components/components.module";
 import {DirectivesModule} from "../directives/directives.module";
+import {ImgCacheProvider} from '../providers/img-cache/img-cache';
 
 @NgModule({
   declarations: [
@@ -20,8 +20,6 @@ import {DirectivesModule} from "../directives/directives.module";
     ComponentsModule,
     DirectivesModule,
     IonicModule.forRoot(OfflineApp),
-
-    CacheImgModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,7 +29,8 @@ import {DirectivesModule} from "../directives/directives.module";
     File,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ImgCacheProvider
   ]
 })
 export class AppModule {

@@ -2,7 +2,6 @@ import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
 import {HomePage} from './home';
 
-import {CacheImgModule} from '../../global';
 import {ComponentsModule} from "../../components/components.module";
 import {DirectivesModule} from "../../directives/directives.module";
 
@@ -11,7 +10,6 @@ import {DirectivesModule} from "../../directives/directives.module";
     HomePage,
   ],
   imports: [
-    CacheImgModule,
     ComponentsModule,
     DirectivesModule,
 

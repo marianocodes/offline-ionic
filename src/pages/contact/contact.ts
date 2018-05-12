@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 
-import { ImgCacheService } from '../../global';
-
 @IonicPage()
 @Component({
   selector: 'page-contact',
@@ -10,6 +8,6 @@ import { ImgCacheService } from '../../global';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, imgCacheService: ImgCacheService) { }
+  constructor(public navCtrl: NavController) { }
 
 }
