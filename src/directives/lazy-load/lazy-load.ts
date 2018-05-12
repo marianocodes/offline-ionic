@@ -7,13 +7,13 @@ import {
   OnInit, OnDestroy, Renderer2
 } from '@angular/core';
 
-import { ImgCacheService } from './img-cache.service';
 
-import { Subscription } from 'rxjs/Subscription';
+import {Subscription} from 'rxjs/Subscription';
+import {ImgCacheService} from "../../global/img-cache/img-cache.service";
 
 /**
-* This directive is charge of cache the images and emit a loaded event
-*/
+ * This directive is charge of cache the images and emit a loaded event
+ */
 @Directive({
   selector: '[op-lazy-img]'
 })
@@ -31,8 +31,9 @@ export class LazyLoadDirective implements OnInit, OnDestroy {
   private cacheSubscription: Subscription;
 
   constructor(public el: ElementRef,
-    public imgCacheService: ImgCacheService,
-    public renderer: Renderer2) { }
+              public imgCacheService: ImgCacheService,
+              public renderer: Renderer2) {
+  }
 
   public ngOnInit(): void {
     // get img element
@@ -50,10 +51,10 @@ export class LazyLoadDirective implements OnInit, OnDestroy {
     // cache img and set the src to the img
     this.cacheSubscription =
       this.imgCacheService
-          .cache(this.source)
-          .subscribe((value) => {
-            this.renderer.setAttribute(nativeElement, 'src', value);
-          }, (e) => console.log(e));
+        .cache(this.source)
+        .subscribe((value) => {
+          this.renderer.setAttribute(nativeElement, 'src', value);
+        }, (e) => console.log(e));
   }
 
   public ngOnDestroy(): void {

@@ -6,13 +6,13 @@ import {
 
 import { CommonModule } from '@angular/common';
 
-import { LazyImgComponent } from './lazy-img.component';
-import { LazyLoadDirective } from './lazy-img.directive';
 import { ImgCacheService } from './img-cache.service';
+// import {LazyImgComponent} from "../../components/lazy-img/lazy-img";
+// import {LazyLoadDirective} from "../../directives/lazy-load/lazy-load";
 
 const declarations = [
-  LazyImgComponent,
-  LazyLoadDirective
+  // LazyImgComponent,
+  // LazyLoadDirective
 ];
 
 @NgModule({

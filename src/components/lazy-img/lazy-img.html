@@ -1,0 +1,3 @@
+<div text-center [ngClass]="{ 'placeholder': placeholderActive }">
+    <img op-lazy-img [source]="source" (loaded)="placeholderActive = false"/>
+</div>
