@@ -1,21 +1,26 @@
-import { Injectable } from '@angular/core';
-import { File } from '@ionic-native/file';
-import { Platform } from 'ionic-angular';
+import {Injectable} from '@angular/core';
+
+import {File} from '@ionic-native/file';
+import {Platform} from 'ionic-angular';
 
 import ImgCache from '@chrisben/imgcache.js';
 
-import { ReplaySubject } from 'rxjs/ReplaySubject';
-import { map, take, flatMap, switchMapTo, tap } from 'rxjs/operators';
-import { Observable } from 'rxjs/Observable';
-import { bindCallback } from 'rxjs/observable/bindCallback';
+import {ReplaySubject} from 'rxjs/ReplaySubject';
+import {map, take, flatMap, switchMapTo, tap} from 'rxjs/operators';
+import {Observable} from 'rxjs/Observable';
+import {bindCallback} from 'rxjs/observable/bindCallback';
 
-import { normalizeUrlIos } from '../utils';
+import {normalizeUrlIos} from "../../global/utils/url.util";
 
-/**
- * This service is charged of provide the methods to cache the images
- */
+/*
+  Generated class for the ImgCacheProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
 @Injectable()
-export class ImgCacheService {
+export class ImgCacheProvider {
+
 
   private initNotifier$: ReplaySubject<string> = new ReplaySubject();
 

@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { ImgCacheService } from '../global';
+import { ImgCacheProvider} from "../providers/img-cache/img-cache";
 
 @Component({
   templateUrl: 'app.html'
@@ -15,7 +15,7 @@ export class OfflineApp {
 
   public rootPage = 'TabsPage';
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, imgCacheService: ImgCacheService) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, imgCacheService: ImgCacheProvider) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();

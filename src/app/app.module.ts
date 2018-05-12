@@ -1,13 +1,15 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { File } from '@ionic-native/file';
+import {NgModule, ErrorHandler} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {File} from '@ionic-native/file';
 
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
 
-import { OfflineApp } from './app.component';
-import { CacheImgModule } from '../global';
+import {OfflineApp} from './app.component';
+import {ComponentsModule} from "../components/components.module";
+import {DirectivesModule} from "../directives/directives.module";
+import {ImgCacheProvider} from '../providers/img-cache/img-cache';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,11 @@ import { CacheImgModule } from '../global';
   ],
   imports: [
     BrowserModule,
+    ComponentsModule,
+    DirectivesModule,
     IonicModule.forRoot(OfflineApp),
-
-    CacheImgModule.forRoot(),
   ],
-  bootstrap: [ IonicApp ],
+  bootstrap: [IonicApp],
   entryComponents: [
     OfflineApp
   ],
@@ -27,7 +29,9 @@ import { CacheImgModule } from '../global';
     File,
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ImgCacheProvider
   ]
 })
-export class AppModule {}
+export class AppModule {
+}

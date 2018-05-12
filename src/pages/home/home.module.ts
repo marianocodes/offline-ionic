@@ -1,20 +1,24 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { HomePage } from './home';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {HomePage} from './home';
 
-import { CacheImgModule } from '../../global';
+import {ComponentsModule} from "../../components/components.module";
+import {DirectivesModule} from "../../directives/directives.module";
 
 @NgModule({
   declarations: [
     HomePage,
   ],
   imports: [
-    CacheImgModule,
+    ComponentsModule,
+    DirectivesModule,
 
     IonicPageModule.forChild(HomePage),
   ],
   exports: [
     HomePage
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomePageModule {}
+export class HomePageModule {
+}
